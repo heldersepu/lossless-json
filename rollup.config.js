@@ -1,4 +1,4 @@
-import babel from 'rollup-plugin-babel';
+import buble from 'rollup-plugin-buble';
 import uglify from 'rollup-plugin-uglify';
 
 export default {
@@ -8,10 +8,7 @@ export default {
   moduleName: 'LosslessJSON',
   sourceMap: true,
   plugins: [
-    babel({
-      babelrc: false,
-      presets: ["es2015-rollup"]
-    }),
+    buble(),
     uglify()
   ]
 };
